@@ -1,0 +1,17 @@
+{
+  "intervalMs": 30000,
+  "speedtestIntervalMs": 1800000,
+  "pingCount": 5,
+  "pingTimeoutSec": 1,
+  "httpTimeoutMs": 10000,
+  "dnsTimeoutMs": 5000,
+  "gateway": "auto",
+  "internet1": "1.1.1.1",
+  "internet2": "8.8.8.8",
+  "dnsQuery": "cloudflare.com",
+  "httpUrl": "https://www.cloudflare.com/cdn-cgi/trace",
+  "dbPath": "./data/network.db",
+  "speedtestCommand": "speedtest",
+  "dashboardHost": "0.0.0.0",
+  "dashboardPort": 8080
+}

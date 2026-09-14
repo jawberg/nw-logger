@@ -1,0 +1,28 @@
+{
+  "name": "nw-ts",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Raspberry Pi network logger: ping/DNS/HTTP/speedtest → SQLite",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc && npm run build --prefix web",
+    "build:server": "tsc",
+    "build:web": "npm run build --prefix web",
+    "dev:web": "npm run dev --prefix web",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "export-csv": "node dist/export-csv.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.10.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^22.15.3",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
+}

@@ -1,0 +1,9 @@
+node_modules/
+dist/
+web/node_modules/
+web/dist/
+data/
+config.json
+samples.csv
+*.log
+.DS_Store

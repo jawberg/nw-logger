@@ -1,0 +1,21 @@
+[Unit]
+Description=Network logger (nw-ts)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/opt/nw-ts
+ExecStart=/usr/bin/node dist/index.js
+Restart=always
+RestartSec=5
+Environment=NODE_ENV=production
+# Optional: Environment=NW_CONFIG=/opt/nw-ts/config.json
+# Optional: Environment=NW_DB_PATH=/var/lib/nw-logger/network.db
+# Dashboard (LAN): http://<pi-ip>:8080
+# Optional: Environment=NW_DASHBOARD_HOST=0.0.0.0
+# Optional: Environment=NW_DASHBOARD_PORT=8080
+
+[Install]
+WantedBy=multi-user.target
