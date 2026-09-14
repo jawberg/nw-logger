@@ -67,11 +67,22 @@ Lokaal (WSL of Pi, zonder systemd):
 
 ```bash
 cp config.example.json config.json
-npm ci
+npm install
 npm install --prefix web
 npm run build
 npm start
 ```
+
+Ontwikkelmodus (TypeScript direct, zonder build):
+
+```bash
+npm install          # installeert o.a. tsx (devDependency)
+npm rebuild better-sqlite3
+npm run dev
+```
+
+Als `tsx: not found`: devDependencies ontbreken — run `npm install` opnieuw (niet `npm install --omit=dev`).
+Op WSL/Linux is `build-essential` nodig voor `better-sqlite3`.
 
 ## Config
 
